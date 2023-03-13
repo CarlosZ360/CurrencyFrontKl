@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -72,7 +73,12 @@
             },
             "development": {
               "browserTarget": "software:build:development"
+            },
+            "docker": {
+              "browserTarget": "software:build:docker"
             }
+            
+           
           },
           "defaultConfiguration": "development"
         },
@@ -94,6 +100,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
               "src/styles.css"
             ],
             "scripts": []
