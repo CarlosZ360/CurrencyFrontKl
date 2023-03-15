@@ -13,7 +13,8 @@ export class CurrencyService {
 
   }
   public convertCurrency(from: string, to: string, amount: number): Observable<ResponseCurrencyDto>{
-    return this.http.get<any>("${environment.BACKEND_URL}/api/currency/exchange?from="
-     + from + "&to=" + to + "&amount=" + amount);
+    //return this.http.get<any>("${environment.BACKEND_URL}/api/currency/exchange?from="
+    return this.http.get<any>("http://localhost:8080/backend/api/currency/exchange?from="
+    + from + "&to=" + to + "&amount=" + amount);
   }
 }                          

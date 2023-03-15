@@ -4,7 +4,7 @@
 
 export const environment = {
   API_KEY:"ASFFASASFA",
-  BACKEND_URL:"http://currency-converter:8080"
+  BACKEND_URL:"http://localhost:8080/backend"
 
 
 };

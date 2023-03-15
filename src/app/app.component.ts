@@ -28,16 +28,15 @@ export class AppComponent {
     this.currencyService.convertCurrency(this.currencyForm.value.from,
     this.currencyForm.value.to,
     this.currencyForm.value.amount).subscribe({
-      next: (data ) => {
-        console.log("Invocacion correcta");
-        console.log(data);
-        this.responseCurrencyDto = data;
-        console.log("resultado");
+      next: (response: ResponseCurrencyDto) => {
+        console.log('invocacion exitosa');
+        console.log(response);
+        this.responseCurrencyDto = response;
+        console.log('resultado');
         console.log(this.responseCurrencyDto.result);
-
       },
       error: error => {console.log("Error",error)}
     })
-    console.log("test");
+    console.log("testsss");
   }
 }

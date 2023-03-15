@@ -11,5 +11,5 @@ RUN ng build --configuration $environment
 
 FROM nginx:1.17.0-alpine
 
-COPY nginx.conf /etc/nginx/nginx.conf
+#COPY nginx.conf /etc/nginx/nginx.conf
 COPY --from=build /usr/src/app/dist/software /usr/share/nginx/html
