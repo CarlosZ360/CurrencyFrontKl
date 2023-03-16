@@ -1,13 +1,13 @@
 import { Component } from '@angular/core';
-import {ChangeDto} from "../../dto/change.dto";
-import {CurrencyService} from "../../service/currency.service";
+import {CurrencyService} from "./../service/currency.service";
+import {ChangeDto} from "./../dto/change.dto";
 
 @Component({
-  selector: 'app-history',
-  templateUrl: './history.component.html',
-  styleUrls: ['./history.component.css']
+  selector: 'app-lista',
+  templateUrl: './lista.component.html',
+  styleUrls: ['./lista.component.css']
 })
-export class HistoryComponent {
+export class ListaComponent {
   changeDto: ChangeDto[];
   page: number=0;
   totalpage: number=0;

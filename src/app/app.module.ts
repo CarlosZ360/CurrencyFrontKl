@@ -11,14 +11,14 @@ import {MatIconModule} from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 //import { HistoryComponent } from './components/history/history.component';
-import {HistoryComponent} from './components/history/history.component';
 import {MatTableModule} from "@angular/material/table";
 import {MatDatepickerModule} from "@angular/material/datepicker";
+import { ListaComponent } from './lista/lista.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HistoryComponent
+    ListaComponent
     
     
   ],
