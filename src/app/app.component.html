@@ -292,6 +292,7 @@
       right: 120px;
       transform: rotate(-5deg);
     }
+    
   }
 
   @media screen and (max-width: 575px) {
@@ -299,6 +300,15 @@
       display: none;
       visibility: hidden;
     }
+  }
+  .example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+
+  .example-full-width {
+    width: 100%;
   }
 </style>
 
@@ -341,7 +351,7 @@
       </g>
     </svg>
 
-    <span>{{ title }} app is running!</span>
+    <span>{{ title }} conversion de divisas</span>
 
     <svg id="rocket-smoke" xmlns="http://www.w3.org/2000/svg" width="516.119" height="1083.632" viewBox="0 0 516.119 1083.632">
       <title>Rocket Ship Smoke</title>
@@ -349,6 +359,7 @@
     </svg>
     
   </div>
+  <br>
   <form class="example-form" [formGroup]="currencyForm" (ngSubmit)="submit()">
     <mat-form-field class="example-full-width">
       <mat-label>Moneda origen</mat-label>
@@ -362,13 +373,15 @@
       <mat-label>Monto</mat-label>
       <input matInput placeholder="Ex. Monto" formControlName="amount">
     </mat-form-field>
-    <button mat-raised-button color="warn">Convertir</button>
+    <button mat-raised-button color="warn">Convertirs</button>
     
   </form>
   <span *ngIf="responseCurrencyDto != undefined">Resultado {{responseCurrencyDto.result}} </span>
+  <app-history></app-history>
+  
+  
+  
 </div>
-
-
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
