@@ -17,7 +17,8 @@ export class ListaComponent {
   }
 
   ngOnInit(){
-    this.currencyService.getCurrencyList().subscribe({
+    
+    this.currencyService.getCurrencyList(this.page).subscribe({
       next:data=>{
         this.changeDto= data.content;
         this.totalpage = data.totalPages;
@@ -26,21 +27,25 @@ export class ListaComponent {
   }
 
   pageCount(){
-    if (this.page < this.totalpage){
+    
+    
+      
       this.page++;
-      this.currencyService.getCurrencyList().subscribe({
+      this.currencyService.getCurrencyList(this.page).subscribe({
         next:data=>{
           this.changeDto= data.content;
           this.totalpage = data.totalPages;
         }
       })
-    }
+    
   }
 
   pageDown(){
+    
     if (this.page != 0){
+      
       this.page--;
-      this.currencyService.getCurrencyList().subscribe({
+      this.currencyService.getCurrencyList(this.page).subscribe({
         next:data=>{
           this.changeDto= data.content;
           this.totalpage = data.totalPages;

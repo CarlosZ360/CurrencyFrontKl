@@ -33,3 +33,5 @@
     <tr mat-header-row *matHeaderRowDef="displayData"></tr>
     <tr mat-row *matRowDef="let row; columns: displayData;"></tr>
   </table>
+  <button mat-raised-button color="warn" (click)="pageDown()">-</button>
+  <button mat-raised-button color="warn"(click)="pageCount()">+</button>

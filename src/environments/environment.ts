@@ -3,8 +3,8 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  API_KEY:"ASFFASASFA",
-  BACKEND_URL:"http://localhost:8080/backend"
+  API_KEY:"environment",
+  BACKEND_URL:"http://localhost:4200/backend"
 
 
 };
