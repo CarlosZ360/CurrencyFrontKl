@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import {HttpClient} from "@angular/common/http";
 import { Observable } from 'rxjs';
 import { ResponseCurrencyDto } from '../dto/response.currency.dto';
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/environments/environment.prod';
 import {ChangeDto} from "../dto/change.dto";
 @Injectable({
   providedIn: 'root'
@@ -21,7 +21,7 @@ export class CurrencyService {
     + from + "&to=" + to + "&amount=" + amount);
   }
   public getCurrencyList(page: number): Observable<any>{
-    //return this.http.get<any>(`http://localhost:8080/api/currency/history?page=0&size=10`);
-    return this.http.get<any>(`${environment.BACKEND_URL}/api/currency/history?page=`+ page +`&size=10`);
+    return this.http.get<any>(`http://localhost:8080/api/currency/history?page=`+ page +`&size=10`);
+    //return this.http.get<any>(`${environment.BACKEND_URL}/api/currency/history?page=`+ page +`&size=10`);
   }
 }                          
